@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="miniapp2.css">
+</head>
+<body>
+
+  <header>
+    <h1>Productivity App</h1>
+    <p>Manage all your tasks easily</p>
+  </header>
+
+  
+<!-- this section holds place to add tasks
+ and also the local calendar to pick date and time
+ for scheduling of tasks. -->
+  <section class="add-task">
+    <input id="taskText" type="text" placeholder="Add new task...">
+    <input id="taskDeadline" type="datetime-local">
+    <button id="addBtn">Add</button>
+  </section>
+
+
+<!-- this sections enables us to filter tasks
+ based on their status. that means grouping them as 
+ completed, active or  missed tasks. -->
+  <section class="controls">
+    <input id="searchBox" type="text" placeholder="Search tasks...">
+    <select id="filter">
+      <option value="all">All tasks</option>
+      <option value="active">Active tasks</option>
+      <option value="completed">Completed tasks</option>
+      <option value="overdue">Missed tasks</option>
+    </select>
+  </section>
+
+
+<!-- this section stores tasks in list form 
+ when task is added -->
+  <ul id="taskList"></ul>
+
+  <footer>
+    <p>© 2025 Productivity App with LocalStorage & Notifications</p>
+  </footer>
+
+  <script src="miniapp2.js"></script>
+</body>
+</html>
